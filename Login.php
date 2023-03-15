@@ -21,6 +21,9 @@
   if (mysqli_num_rows($result) = 1) {
     // Login successful, redirect to desired website
     //echo nl2br("\n參與者攞咗禮物!✔️"); 
+    $_SESSION["username"] = $user;
+    header("Location: login.html");    
+    exit();
 
     $output = "Hello World!";
     echo $output;
